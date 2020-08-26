@@ -1,0 +1,95 @@
+.site-info {
+    margin: 0 0 0.75rem !important;
+
+    .site-imprint-container {
+        width: 100%;
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+
+
+        @media (min-width: 576px) {
+            max-width: 540px;
+        }
+        @media (min-width: 768px) {
+            max-width: 720px;
+        }
+        @media (min-width: 992px) {
+            max-width: 960px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .region-footer,
+        .region-footer-second {
+            @media (min-width: 768px) {
+                flex: 1;
+                width: auto;
+                max-width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 0.75rem;
+            }
+        }
+
+        .address-container,
+        .navigation-container {
+            @media (min-width: 576px) {
+                flex: 1;
+                width: auto;
+            }
+            width: 100%;
+            padding-right: 12px;
+            padding-left: 12px;
+        }
+
+        .navigation-container {
+            padding-bottom: 1.5rem;
+        }
+
+        .region-footer {
+            padding-right: 12px;
+            padding-left: 12px;
+        }
+
+        .navigation-links {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding-left: 0;
+            margin-bottom: 0;
+            margin-top: 1rem;
+            list-style: none;
+        }
+
+        .navigation-item a {
+            display: block;
+            padding: 0.3rem;
+            position: relative;
+            text-decoration: none !important;
+        }
+
+        .navigation-item a:hover::after {
+            height: 1px;
+            opacity: 1;
+            background-color: #fff;
+        }
+
+        .navigation-item a::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0.3rem;
+            bottom: 0;
+            left: 0.3rem;
+            height: 0;
+            opacity: 0.3;
+            transition: all 0.2s;
+        }
+    }
+}

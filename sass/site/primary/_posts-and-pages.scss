@@ -45,7 +45,12 @@
 	.entry-title {
 
 		@include post-section-dash;
+
 		margin: 0;
+		
+		&:before {
+			display: none;
+		}
 
 		a {
 			color: inherit;
@@ -160,7 +165,7 @@
 			}
 
 			&:before,
-			&:after, {
+			&:after {
 				position: absolute;
 				display: block;
 				width: 100%;

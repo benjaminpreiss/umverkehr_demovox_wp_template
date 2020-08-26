@@ -10,7 +10,7 @@
     "@wordpress/browserslist-config": "^2.2.2",
     "autoprefixer": "^9.1.5",
     "chokidar-cli": "^1.2.1",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.0.1",
     "postcss-focus-within": "^3.0.0",
@@ -39,6 +39,13 @@
     "build:rtl": "rtlcss style.css style-rtl.css",
     "build:print": "node-sass print.scss print.css --output-style expanded && postcss -r print.css",
     "build": "run-p \"build:*\"",
-    "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
+    "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
+    "dev:style": "node-sass style.scss style.css --source-map true --output-style expanded && postcss -r style.css",
+    "dev:style-editor": "node-sass style-editor.scss style-editor.css --source-map true --output-style expanded && postcss -r style-editor.css",
+    "dev:style-editor-customizer": "node-sass style-editor-customizer.scss style-editor-customizer.css --source-map true --output-style expanded && postcss -r style-editor-customizer.css",
+    "dev:rtl": "rtlcss style.css style-rtl.css",
+    "dev:print": "node-sass print.scss print.css --source-map true --output-style expanded && postcss -r print.css",
+    "dev": "run-p \"dev:*\"",
+    "dev-watch": "chokidar \"**/*.scss\" -c \"npm run dev\" --initial"
   }
 }
